@@ -9,11 +9,9 @@
   }
 
 body{
-    margin-left: 10px;
-    margin-right: 10px;
-    /* background-image: url(../images/dict-background.jpg); */
+    margin-left: 1vh;
+    margin-right: 1vh;
     background-color: darkslateblue;
-    /* used if image is unavailable */
     animation-name: animation;
     animation-duration: 4s;
     animation-fill-mode: forwards;
@@ -22,30 +20,30 @@ body{
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    font-size: 18px;
+    font-size: 2.8vh;
     color: azure;
-    padding: 5px;
+    padding: 0.5vh;
     line-height: 1.3;
     font-family: "Libre+Baskerville", serif;
 }
 
 ul{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
     font-family: 'Inconsolata', serif;
 }
 
 p{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     font-family: 'Inconsolata', serif;
 }
 
 img{
     width: 90%;
-    padding: 20px;
+    padding: 2vh;
     margin: auto;
-    border: dashed darkgray 5px;
+    border: dashed darkgray 0.5vh;
     display: block;
     border-radius: 10%;
 }
@@ -68,36 +66,37 @@ div img:nth-child(n+1){
 
 
 h3{
-    font-size: 20px;
+    font-size: 3vh;
     font-style: italic;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
 }
 
 div h3{
-    padding-left: 10px;
+    padding-left: 1vh;
 }
 
 h2, dt{
     font-weight: bold;
-    font-size: 36px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 
 
 h1{
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 10vh; 
+    /* 70px */
     font-weight: bold;
-    padding: 20px;
+    padding: 4vh;
 }
 
 nav ul li{
     display: inline-block;
     margin: auto;
-    padding: 20px;
+    padding: 3vh;
     text-align: left;
     font-family: "Libre+Baskerville", serif;
 }
@@ -113,9 +112,9 @@ nav{
 
 
 .active{
-    text-decoration: underline wavy lightblue 5px;
+    text-decoration: underline wavy lightblue 0.2vh;
     color: whitesmoke;
-    font-size: x-large;
+    font-size: 3vh;
     text-transform: uppercase;
 }
 
@@ -124,7 +123,7 @@ a.skip, a.tops, p a{
 }
 
 footer{
-    margin-top: 20px;
+    margin-top: 3vh;
 }
 
 /* grid container */
@@ -132,7 +131,7 @@ footer{
     display: grid;
     grid-template-rows: max-content;
     grid-template-columns: 1fr;
-    row-gap: 5px;
+    row-gap: 2vh;
   }
 
 dl{
@@ -162,9 +161,9 @@ dl{
 .container div img{
     width: auto;
     max-height: 200px;
-    border: 1px solid darkgray;
+    border: 0.2vh solid darkgray;
     border-radius: 4px;
-    padding: 5px;
+    padding: 1vh;
     background-size: cover;
     order:1;
     align-self: flex-start;
@@ -172,8 +171,8 @@ dl{
 
 .container div p{
     flex-shrink: 1.3;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
 
 /* .container div ul{
@@ -181,17 +180,19 @@ dl{
 } */
 
 .container div h2{
-    padding: 5px;
-    margin: 10px;
+    padding: 1vh;
+    margin: 2vh;
 }
 
 dt{
-    border: 1px solid darkgray;
-    padding-left: 10px;
+    border: 0.2vh solid darkgray;
+    padding-left: 2vh;
     /* background-color: rgba(47, 47, 117, 0.4); */
 }
 
-
+.intro{
+    background-color: rgba(20, 20, 22, 0.6);
+    }
   
 
 /* large screen background */
@@ -200,9 +201,9 @@ dt{
 
 
     .active{
-        text-decoration: underline wavy black 5px;
-        color: beige;
-        font-size: x-large;
+        text-decoration: underline wavy black 0.2vh;
+        color: whitesmoke;
+        font-size: 3.5vh;
         text-transform: uppercase;
     }
 
@@ -236,3 +237,12 @@ dt{
     } */
 
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+  
+    /*Turn off transition*/
+    body {
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+  }
