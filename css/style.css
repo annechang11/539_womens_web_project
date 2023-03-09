@@ -1,15 +1,44 @@
+
+/* The animation code */
+@keyframes animation {
+    0% {background-color: darkslateblue;}
+    25% {background-color: rgb(24, 20, 47);}
+    50% {background-color: rgb(19, 16, 37);}
+    75% {background-color: rgb(1, 1, 2);}
+    100% {background-image: url(../images/dict-background.jpg);}
+  }
+
 body{
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: lightgray;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-image: url(../images/dict-background.jpg); */
+    background-color: darkslateblue;
+    /* used if image is unavailable */
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    /* animation */
+    min-height: 500px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
     font-size: 18px;
-    padding: 10px;
+    color: azure;
+    padding: 5px;
     line-height: 1.3;
+    font-family: "Libre+Baskerville", serif;
+}
+
+ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Inconsolata', serif;
 }
 
 p{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Inconsolata', serif;
 }
 
 img{
@@ -37,23 +66,21 @@ div img:nth-child(n+1){
     text-align: center;
 } */
 
-dt{
-    font-size: x-large;
-    font-weight: bold;
+
+h3{
+    font-size: 20px;
+    font-style: italic;
     padding-top: 10px;
     padding-bottom: 5px;
 }
 
-h3{
-    font-size: large;
-    font-style: italic;
-    padding-top: 5px;
-    padding-bottom: 5px;
+div h3{
+    padding-left: 10px;
 }
 
-h2{
+h2, dt{
     font-weight: bold;
-    font-size: x-large;
+    font-size: 36px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -63,6 +90,7 @@ h2{
 h1{
     text-transform: uppercase;
     font-size: 70px;
+    font-weight: bold;
     padding: 20px;
 }
 
@@ -71,12 +99,140 @@ nav ul li{
     margin: auto;
     padding: 20px;
     text-align: left;
+    font-family: "Libre+Baskerville", serif;
+}
+
+nav ul li a{
+    color: lightblue;
+    text-transform: uppercase;
+}
+
+nav{
+    background-color: rgb(46, 40, 87, 0.8);
 }
 
 
 .active{
-    text-decoration: underline wavy black 5px;
-    color: black;
+    text-decoration: underline wavy lightblue 5px;
+    color: whitesmoke;
     font-size: x-large;
     text-transform: uppercase;
+}
+
+a.skip, a.tops, p a{
+    color:lightgray;
+}
+
+footer{
+    margin-top: 20px;
+}
+
+/* grid container */
+.container, dl{ 
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+dl{
+    background-color: rgba(20, 20, 22, 0.6);
+}
+
+ /* flex container */
+.container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .person{
+    background-color: rgba(20, 20, 22, 0.6);
+    }
+
+.container .person:nth-child(2n+1)  {
+    background-color: rgba(47, 47, 117, 0.4);
+    }
+
+/* .container .about:nth-child(2n+1)  {
+        background-color: rgba(47, 47, 117, 0.4);
+    } */
+    
+
+.container div img{
+    width: auto;
+    max-height: 200px;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    padding: 5px;
+    background-size: cover;
+    order:1;
+    align-self: flex-start;
+}
+
+.container div p{
+    flex-shrink: 1.3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* .container div ul{
+    padding-left: 10px;
+} */
+
+.container div h2{
+    padding: 5px;
+    margin: 10px;
+}
+
+dt{
+    border: 1px solid darkgray;
+    padding-left: 10px;
+    /* background-color: rgba(47, 47, 117, 0.4); */
+}
+
+
+  
+
+/* large screen background */
+@media only screen and (min-width: 800px){
+
+
+
+    .active{
+        text-decoration: underline wavy black 5px;
+        color: beige;
+        font-size: x-large;
+        text-transform: uppercase;
+    }
+
+    .container div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(20, 20, 22, 0.6);
+    }
+    
+    .container .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* background-color: rgba(20, 20, 22, 0.6); */
+        width: 50%;
+    }
+
+    .container .keywork{
+        display: flex;
+        flex-direction: column;
+        justify-items:baseline;
+        /* background-color: rgba(20, 20, 22, 0.6); */
+        /* overflow: scroll; */
+        /* max-height: 200px; */
+        width: 15%;
+    }
+
+    /* div h3{
+        padding-left: 2px;
+    } */
+
 }
