@@ -56,8 +56,8 @@ div img {
     width: 50%;
  }
 
-div img:nth-child(n+1){
-    width: 50%
+div img:nth-child(2n){
+    width: 50%;
 }
 
 /* div{    
@@ -120,6 +120,21 @@ nav{
 
 a.skip, a.tops, p a{
     color:lightgray;
+}
+
+.skip{
+    /* visibility: hidden; */
+    position: absolute; 
+    left: -30px;
+    top: -30px;
+}
+
+.skip:focus{
+    /* visibility: visible; */
+    position: relative; 
+    left: 2vh;
+    top: 1vh;
+    margin-bottom: 2vh;
 }
 
 footer{
